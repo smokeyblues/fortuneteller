@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+  <title>Fortune Teller</title>
+  <link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  
+	<style>
+	  img {
+			width: 100%;
+			}
+	</style>
+	
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <a class="brand" href="/">The Fortune Teller</a>
+      <ul class="nav">
+        <li class="active"><%= link_to 'cards', cards_path %></li>
+		<li class="active"><%= link_to 'about this app', pages_info_path %></li>
+		<li class="active"><%= link_to 'get your fortune', cards_fortune_path %></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <%= yield %>
+</div>
+
+<footer>
+  <div class="container">
+    Fortune Teller 2013
+  </div>
+</footer>
+
+</body>
+</html>

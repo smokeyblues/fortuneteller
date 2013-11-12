@@ -1,0 +1,28 @@
+<%= link_to 'New Card', new_card_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cards.each do |card| %>
+      <tr>
+		<td><%= image_tag card.picture, :width => 50 %></td>
+        <td><strong><%= card.name %></strong></td>
+        <td><%= card.description %></td>
+        <td><%= link_to 'View', card %></td>
+        <td><%= link_to 'Edit', edit_card_path(card) %></td>
+        <td><%= link_to 'Delete', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Card', new_card_path %>

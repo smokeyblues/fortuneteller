@@ -1,0 +1,89 @@
+<div class="container-fluid">
+	
+	<h1>Your Fortune</h1>
+
+		<table width="100%">
+		  <thead>
+			<tr>
+			  
+			  <th></th>
+			  <th></th>
+			  <th></th>
+			</tr>
+		  </thead>
+
+		  <tbody>
+			<% @cards_past.each do |card_past| %>
+			  <td>
+				<p>
+				</p>
+				<p>
+				
+					<div class="row">
+					  <div class="container-fluid">
+						<div class="thumbnail">
+							<%= image_tag card_past.picture, :class => "img-rounded" %>
+									
+						</div>
+					  </div>
+					</div>
+
+				</p>
+				<p>
+				
+				</p>
+			  </td>
+			  <% end %>
+			  
+			  <% @cards_present.each do |card_present| %>
+			  <td>
+				<p>
+
+				</p>
+				<p>
+					<div class="row">
+					  <div class="container-fluid">
+						<div class="thumbnail">
+							<%= image_tag card_present.picture, :class => "img-rounded" %>
+						</div>
+					  </div>
+					</div>
+				
+				</p>
+				<p>
+				
+				</p>
+			  </td>
+			  <% end %>
+			  
+			  <% @cards_future.each do |card_future| %>
+			  <td>
+				<p>
+				</p>
+				<p>
+				
+				<div class="row">
+					  <div class="container-fluid">
+						<div class="thumbnail">
+							<%= image_tag card_future.picture, :class => "img-rounded" %>
+						</div>
+					  </div>
+					</div>
+				
+				</p>
+				<p>
+				
+				</p>
+			  </td>
+			  <% end %>
+			  <tr>
+			  
+			  You have just recently left behind a situation dominated by <% @cards_past.each do |card_past| %><%= card_past.description %><% end %>. 
+			  You are now in a time where <% @cards_present.each do |card_present| %><%= card_present.description %><% end %> may be quite prevalent. 
+			  Soon, you will find <% @cards_future.each do |card_future| %><%= card_future.description %><% end %> 
+			  weigh heavily in the next chapter in your life.
+			  
+		  </tbody>
+		</table>
+
+</div>
