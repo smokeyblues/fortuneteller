@@ -13,9 +13,9 @@ class CardsController < ApplicationController
   end
 
   def fortune
-	@cards_past = Card.find([rand(1-78)])
-	@cards_present = Card.find([rand(1-78)])
-	@cards_future = Card.find([rand(1-78)])
+	@cards_past = Card.find([rand(1-40)])
+	@cards_present = Card.find([rand(1-40)])
+	@cards_future = Card.find([rand(1-40)])
 	#@cards = Card.all.sort_by { rand }
   end
   

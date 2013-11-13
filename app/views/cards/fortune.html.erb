@@ -78,10 +78,9 @@
 			  <% end %>
 			  <tr>
 			  
-			  You have just recently left behind a situation dominated by <% @cards_past.each do |card_past| %><%= card_past.description %><% end %>. 
-			  You are now in a time where <% @cards_present.each do |card_present| %><%= card_present.description %><% end %> may be quite prevalent. 
-			  Soon, you will find <% @cards_future.each do |card_future| %><%= card_future.description %><% end %> 
-			  weigh heavily in the next chapter in your life.
+			  In the recent past, your life was defined by <% @cards_past.each do |card_past| %><%= card_past.description %><% end %>. 
+			  Presently, you are occupied by <% @cards_present.each do |card_present| %><%= card_present.description %><% end %>. 
+			  Soon in your life there will be <% @cards_future.each do |card_future| %><%= card_future.description %><% end %>.
 			  
 		  </tbody>
 		</table>
